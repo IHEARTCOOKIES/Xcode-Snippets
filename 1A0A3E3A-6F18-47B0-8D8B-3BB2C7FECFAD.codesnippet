@@ -11,30 +11,30 @@
 	<key>IDECodeSnippetContents</key>
 	<string>#pragma mark - Init methods
 - (instancetype)init {
-  self = [super init];
-  if (self) {
-    [self commonInit];
-  }
-  return self;
+    self = [super init];
+    if (self) {
+        [self &lt;#class name#&gt;CommonInit];
+    }
+    return self;
 }
 - (instancetype)initWithFrame:(CGRect)frame {
-  self = [super initWithFrame:frame];
-  if (self) {
-    [self commonInit];
-  }
-  return self;
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self &lt;#class name#&gt;CommonInit];
+    }
+    return self;
 }
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
-  self = [super initWithCoder:aDecoder];
-  if (self) {
-    [self commonInit];
-  }
-  return self;
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self &lt;#class name#&gt;CommonInit];
+    }
+    return self;
 }
 
 #pragma mark - Common init
-- (void)commonInit {
-  &lt;#Statements#&gt;
+- (void)&lt;#class name#&gt;CommonInit {
+    &lt;#Statements#&gt;
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>1A0A3E3A-6F18-47B0-8D8B-3BB2C7FECFAD</string>

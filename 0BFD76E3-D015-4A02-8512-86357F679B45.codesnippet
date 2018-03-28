@@ -3,22 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>pcro</string>
+	<string>sharedInstance</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, copy, readonly) &lt;#Class#&gt; *&lt;#Property Name#&gt;;</string>
+	<string>#pragma mark - Shared Instance
++ (instancetype)sharedInstance {
+  static &lt;#Class#&gt; *sharedInstance = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&amp;onceToken, ^{
+    sharedInstance = [[&lt;#Class#&gt; alloc] init];
+  });
+  return sharedInstance;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>36B550A2-8B8D-4ADE-A515-FB0632F22C1B</string>
+	<string>0BFD76E3-D015-4A02-8512-86357F679B45</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>An example implementation of shared instance</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Copy Property ReadOnly</string>
+	<string>Shared Instance</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
