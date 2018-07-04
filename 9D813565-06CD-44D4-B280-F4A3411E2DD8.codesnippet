@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>dispatch_group</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeExpression</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// Create the group
+dispatch_group_t asyncGroup = dispatch_group_create();
+
+dispatch_group_enter(asyncGroup);
+dispatch_group_leave(asyncGroup);
+
+// Wait until the group has completed (semaphore style)
+dispatch_group_wait(asyncGroup, dispatch_time(DISPATCH_TIME_NOW, (int64_t)(&lt;#delayInSeconds#&gt; * NSEC_PER_SEC)));
+
+// Or, call a notify block whenever the group has completed
+dispatch_group_notify(asyncGroup, &lt;#dispatch_queue_t  _Nonnull queue#&gt;, &lt;#^(void)block#&gt;)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9D813565-06CD-44D4-B280-F4A3411E2DD8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>An example of using groups with GCD.</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>GCD: Dispatch Group</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
